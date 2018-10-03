@@ -1,0 +1,27 @@
+<div class="col-sm-6 mt-5 mb-5 text-center userDataPanel">
+  User Data
+</div>
+<div class="col-sm-12 text-center paddingField">
+
+  <div class="row mb-5 mt-5">
+    <p class="col-sm-3 infoBox">Name:</p>
+    <input type="text" [(ngModel)]="data.name" class="offset-sm-1 col-sm-3" [pattern]="'^[a-zA-Z \-\']$'"/>
+    <p *ngIf="!data.name" class="offset-sm-1 col-sm-3 invalidBox">Invalid character!</p>
+  </div>
+  <div class="row mb-3 mt-5">
+    <p class="col-sm-3 infoBox">Surname:</p>
+    <input type="text" [(ngModel)]="data.surname" class="offset-sm-1 col-sm-3"/>
+    <p *ngIf="!data.surname" class="offset-sm-1 col-sm-3 invalidBox">Invalid character!</p>
+  </div>
+  <div class="row mb-3 mt-5">
+    <p class="col-sm-3 infoBox">Age:</p>
+    <input [(ngModel)]="data.age" type="number" min="1" class="offset-sm-1 col-sm-3"/>
+    <p *ngIf="!data.age" class="offset-sm-1 col-sm-3 invalidBox">Invalid character!</p>
+  </div>
+</div>
+
+<div class="col-sm-12 mt-5 mb-5 text-center userDataPanel">
+    Hello {{data.name}} {{data.surname}} !
+  </div>
+<button [disabled]="!data.name || !data.surname || !data.age" (click)="saveUser(data)" 
+class="col-sm-2 offset-sm-4 mt-5 btn btn-success">Save</button>

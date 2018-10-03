@@ -1,0 +1,21 @@
+.paddingField p{
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+.paddingField input{
+  height: 44px;
+}
+
+.paddingField .invalidBox {
+  border: solid 2px red;
+  background-color: antiquewhite; 
+}
+
+.paddingField .infoBox {
+  border: solid 2px blue;
+}
+
+.userDataPanel {
+  padding:8px;
+  border: solid 2px black;
+}

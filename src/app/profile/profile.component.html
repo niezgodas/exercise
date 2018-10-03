@@ -1,0 +1,14 @@
+<div class="profile">
+
+  <div class="col-sm-12 mt-5 mb-5 text-center profilePanel">
+    {{user.name}} {{user.surname}}'Page
+  </div>
+  
+  <button type="button" class="col-sm-2 offset-sm-5 mt-5 mb-5 col-offset-4 btn btn-success text-center"
+  (click)="checkAccess()">ACCESS</button>
+  
+  <img class="mb-5" *ngIf="showPicture" src="assets/face.png" alt='image' >
+  <button *ngIf="noAccessBox" type="button" class="col-sm-4 offset-sm-4 mt-4 mb-5 col-offset-4 btn btn-danger text-center">
+    You by at least 18 yers old!</button>
+</div>
+    
